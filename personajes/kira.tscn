@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://blm1t6vitn30c"]
+
+[ext_resource type="Script" uid="uid://bmcqta5hrix33" path="res://personajes/kira.gd" id="1_bbneb"]
+[ext_resource type="Texture2D" uid="uid://cqc7f2gjakfh7" path="res://Assets/Texturas/kira2-removebg-preview.png" id="1_saxl5"]
+[ext_resource type="Texture2D" uid="uid://cvkkv3j5kkc08" path="res://Assets/Texturas/kira.png" id="2_bbneb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obbe1"]
+atlas = ExtResource("1_saxl5")
+region = Rect2(0, 170, 130, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jjx4"]
+atlas = ExtResource("1_saxl5")
+region = Rect2(136, 170, 130, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mltx0"]
+atlas = ExtResource("1_saxl5")
+region = Rect2(272, 170, 130, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlimy"]
+atlas = ExtResource("2_bbneb")
+region = Rect2(0, 0, 371, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1asi8"]
+atlas = ExtResource("2_bbneb")
+region = Rect2(371, 0, 371, 409)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5x5ui"]
+animations = [{
+"frames": [{
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_obbe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jjx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mltx0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlimy")
+}, {
+"duration": 0.71,
+"texture": SubResource("AtlasTexture_1asi8")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saxl5"]
+size = Vector2(85, 86)
+
+[node name="Kira" type="CharacterBody2D"]
+script = ExtResource("1_bbneb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(392.5, -205.99998)
+scale = Vector2(0.82307684, 0.6352941)
+sprite_frames = SubResource("SpriteFrames_5x5ui")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.93255174
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(393.5, -204)
+shape = SubResource("RectangleShape2D_saxl5")

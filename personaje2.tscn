@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv0gd3rxg1eug"]
+
+[ext_resource type="Texture2D" uid="uid://bstd5643i8ejm" path="res://Assets/Personajes/adaptado-removebg-preview.png" id="1_5yeub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfm61"]
+atlas = ExtResource("1_5yeub")
+region = Rect2(0, 0, 149, 196)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krork"]
+atlas = ExtResource("1_5yeub")
+region = Rect2(153, 0, 149, 196)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ebv"]
+atlas = ExtResource("1_5yeub")
+region = Rect2(306, 0, 149, 196)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tafv"]
+atlas = ExtResource("1_5yeub")
+region = Rect2(459, 0, 149, 196)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1ky8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfm61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krork")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44ebv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tafv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwyv8"]
+size = Vector2(100, 163)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k1ky8")
+autoplay = "default"
+frame_progress = 0.5151933
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, 6.5)
+shape = SubResource("RectangleShape2D_bwyv8")

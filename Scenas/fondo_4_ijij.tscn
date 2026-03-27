@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3luwhwvogdct"]
+
+[ext_resource type="Texture2D" uid="uid://bggbboi76b8f7" path="res://Assets/Personajes/fondo4ijij.png" id="1_yf1y5"]
+[ext_resource type="Texture2D" uid="uid://bmx0ukh6bb7vq" path="res://Assets/Personajes/FondoSpiMasClaro.png" id="2_u5a30"]
+[ext_resource type="Texture2D" uid="uid://jhvj6sm66ux8" path="res://Assets/Personajes/villajaponesa.png" id="3_ghono"]
+[ext_resource type="Texture2D" uid="uid://cfnjl4xskb0gb" path="res://Assets/ParallaxBackground/logo.png" id="4_vlk78"]
+[ext_resource type="Texture2D" uid="uid://clqo44px8bmb6" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/2.png" id="5_olfj0"]
+[ext_resource type="Texture2D" uid="uid://dqxapsu6vojc6" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/1.png" id="6_nr0xe"]
+[ext_resource type="Texture2D" uid="uid://bmab0fgl7clx" path="res://Assets/ParallaxBackground/logo2.png" id="7_n15hu"]
+
+[node name="Fondo4Ijij" type="Sprite2D"]
+position = Vector2(589.99994, 327.00018)
+scale = Vector2(0.7467448, 0.6347656)
+texture = ExtResource("1_yf1y5")
+
+[node name="FondoSpiMasClaro" type="Sprite2D" parent="."]
+position = Vector2(-573.1543, -1121.6741)
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("2_u5a30")
+
+[node name="Villajaponesa" type="Sprite2D" parent="."]
+position = Vector2(-574.6608, -997.21844)
+scale = Vector2(1.0063208, 0.75307685)
+texture = ExtResource("3_ghono")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(-2164.0593, -864.88617)
+scale = Vector2(0.6153007, 0.6661538)
+texture = ExtResource("4_vlk78")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(-573.40533, -1123.6001)
+scale = Vector2(4.01177, 4.7229056)
+texture = ExtResource("5_olfj0")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(-572.0662, -1122.0247)
+scale = Vector2(4.0187445, 4.679145)
+texture = ExtResource("6_nr0xe")
+
+[node name="Logo2" type="Sprite2D" parent="."]
+position = Vector2(-573.1543, -1258.7325)
+scale = Vector2(0.6717528, 0.67153835)
+texture = ExtResource("7_n15hu")

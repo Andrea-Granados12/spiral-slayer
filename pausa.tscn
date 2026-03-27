@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3 uid="uid://uxrm3yfcwalh"]
+
+[ext_resource type="Script" uid="uid://byrovd2rjl5bl" path="res://pausa.gd" id="1_4gdby"]
+[ext_resource type="Texture2D" uid="uid://du8f1yoftekls" path="res://Assets/Texturas/pausarojo.png" id="2_3hdej"]
+[ext_resource type="Texture2D" uid="uid://xe5n8k13r05m" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/W.png" id="3_3hdej"]
+[ext_resource type="FontFile" uid="uid://nw5bue2syyua" path="res://Assets/font/RusticRoadway.otf" id="3_a5tql"]
+[ext_resource type="Texture2D" uid="uid://cbg8vxf04iopx" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/D.png" id="4_eb5sp"]
+[ext_resource type="Texture2D" uid="uid://vymi5cjab3j5" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/I.png" id="5_a5tql"]
+[ext_resource type="Texture2D" uid="uid://b7qkn017lhht5" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/A.png" id="6_42o3v"]
+[ext_resource type="Texture2D" uid="uid://cfnjl4xskb0gb" path="res://Assets/ParallaxBackground/logo.png" id="7_eb5sp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5tql"]
+bg_color = Color(0.3403685, 0, 0.029589377, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[node name="Pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_4gdby")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3hdej")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 272.0
+offset_right = 540.0
+offset_bottom = 315.0
+theme_override_colors/font_color = Color(1, 0.110000014, 0.110000014, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5tql")
+theme_override_font_sizes/font_size = 29
+text = "Brincar"
+
+[node name="Label3" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 251.0
+offset_right = 928.0
+offset_bottom = 302.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5tql")
+theme_override_font_sizes/font_size = 34
+text = "Disparar"
+
+[node name="Label4" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 427.0
+offset_right = 485.0
+offset_bottom = 467.0
+theme_override_colors/font_color = Color(18.892157, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5tql")
+theme_override_font_sizes/font_size = 24
+text = "Izquierda"
+
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 426.0
+offset_right = 603.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5tql")
+theme_override_font_sizes/font_size = 24
+text = "Derecha"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 486.0
+offset_top = 506.0
+offset_right = 706.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5tql")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_a5tql")
+text = "Reanudar"
+
+[node name="W" type="Sprite2D" parent="."]
+position = Vector2(422.99997, 309)
+scale = Vector2(2.3947368, 2.0238094)
+texture = ExtResource("3_3hdej")
+
+[node name="D" type="Sprite2D" parent="."]
+position = Vector2(478, 365)
+scale = Vector2(2.131579, 2.0238094)
+texture = ExtResource("4_eb5sp")
+
+[node name="I" type="Sprite2D" parent="."]
+position = Vector2(802, 295)
+scale = Vector2(2.276313, 2.083333)
+texture = ExtResource("5_a5tql")
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(365, 363)
+scale = Vector2(2.065788, 1.988097)
+texture = ExtResource("6_42o3v")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(588, 141.99998)
+scale = Vector2(0.2630208, 0.2666016)
+texture = ExtResource("7_eb5sp")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

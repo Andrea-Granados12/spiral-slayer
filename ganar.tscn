@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bugdi1jl83s2v"]
+
+[ext_resource type="Script" uid="uid://dxyhp453cftl3" path="res://ganar.gd" id="1_3rp7u"]
+[ext_resource type="FontFile" uid="uid://bqxnu6c8daxsk" path="res://Assets/font/chp-fire.ttf" id="2_3rp7u"]
+[ext_resource type="Texture2D" uid="uid://b2ah5dsklkad7" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/portada.png" id="2_g3kr2"]
+[ext_resource type="FontFile" uid="uid://nw5bue2syyua" path="res://Assets/font/RusticRoadway.otf" id="3_g3kr2"]
+[ext_resource type="Texture2D" uid="uid://cfnjl4xskb0gb" path="res://Assets/ParallaxBackground/logo.png" id="4_ooras"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3rp7u")
+
+[node name="Portada" type="Sprite2D" parent="."]
+position = Vector2(579, 329)
+scale = Vector2(0.75, 0.6357422)
+texture = ExtResource("2_g3kr2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 240.0
+offset_right = 914.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.663372, 1.7928704e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_3rp7u")
+theme_override_font_sizes/font_size = 58
+text = "Siguiente nivel proximamente "
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 442.0
+offset_right = 649.0
+offset_bottom = 494.0
+text = "Reiniciar"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 346.0
+offset_right = 812.0
+offset_bottom = 403.0
+theme_override_fonts/font = ExtResource("3_g3kr2")
+theme_override_font_sizes/font_size = 38
+text = "El caos de los espirales siguen..."
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(574, 140.00002)
+scale = Vector2(0.23372388, 0.2177734)
+texture = ExtResource("4_ooras")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

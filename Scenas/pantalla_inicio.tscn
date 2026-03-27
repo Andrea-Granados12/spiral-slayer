@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bly534neebtou"]
+
+[ext_resource type="Texture2D" uid="uid://cfnjl4xskb0gb" path="res://Assets/ParallaxBackground/logo.png" id="6_sq4sd"]
+[ext_resource type="Texture2D" uid="uid://cpyhhjgb4cre2" path="res://Assets/ParallaxBackground/boton1.png" id="7_lyxj0"]
+[ext_resource type="Texture2D" uid="uid://bk7nhtws1hqju" path="res://Assets/ParallaxBackground/boton3.png" id="8_lxecs"]
+[ext_resource type="Texture2D" uid="uid://v1n2nu8r3ulu" path="res://Assets/ParallaxBackground/boton2.png" id="9_o25rg"]
+[ext_resource type="Script" uid="uid://bsg2iujrwg7pf" path="res://texture_button.gd" id="10_dq50l"]
+[ext_resource type="Texture2D" uid="uid://dmb0dmet5552" path="res://Assets/Personajes/6d5e841c-10b0-4006-96ca-722d03ad840a.png" id="12_vdskf"]
+
+[node name="Pantalla_inicio" type="Node2D"]
+position = Vector2(-1219, 29)
+
+[node name="6d5e841c10b0400696Ca722d03Ad840a" type="Sprite2D" parent="."]
+position = Vector2(1798.0001, 294)
+scale = Vector2(0.7504882, 0.6318359)
+texture = ExtResource("12_vdskf")
+
+[node name="TextureButton" type="TextureButton" parent="6d5e841c10b0400696Ca722d03Ad840a"]
+anchors_preset = -1
+anchor_right = 0.101693325
+anchor_bottom = 0.11998588
+offset_left = -30.646904
+offset_top = -55.394135
+offset_right = 219.5543
+offset_bottom = 87.63214
+texture_normal = ExtResource("7_lyxj0")
+texture_pressed = ExtResource("8_lxecs")
+texture_hover = ExtResource("9_o25rg")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("10_dq50l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(1548, 182)
+scale = Vector2(0.4427084, 0.47851563)
+texture = ExtResource("6_sq4sd")

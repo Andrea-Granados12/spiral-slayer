@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b38vkvuskdgua"]
+
+[ext_resource type="Texture2D" uid="uid://bqbiv66b6krna" path="res://Assets/Texturas/Parallax_Backgrounds_Cave/0.png" id="1_xicv1"]
+[ext_resource type="Texture2D" uid="uid://cfnjl4xskb0gb" path="res://Assets/ParallaxBackground/logo.png" id="2_vfd61"]
+[ext_resource type="Texture2D" uid="uid://bmab0fgl7clx" path="res://Assets/ParallaxBackground/logo2.png" id="3_vfd61"]
+
+[node name="0" type="Sprite2D"]
+position = Vector2(573.5, 327)
+scale = Vector2(2.9921875, 2.9814816)
+texture = ExtResource("1_xicv1")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(457.35773, 187.15527)
+scale = Vector2(0.14860749, 0.17278486)
+texture = ExtResource("2_vfd61")
+
+[node name="Logo2" type="Sprite2D" parent="."]
+position = Vector2(6.8511753, -17.440989)
+scale = Vector2(0.18080936, 0.16324057)
+texture = ExtResource("3_vfd61")

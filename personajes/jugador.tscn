@@ -1,0 +1,213 @@
+[gd_scene load_steps=31 format=3 uid="uid://xdx1xnsmuud3"]
+
+[ext_resource type="Script" uid="uid://gl6xi44q7lpf" path="res://personajes/jugador.gd" id="1_hhulh"]
+[ext_resource type="Texture2D" uid="uid://48rrayfpn047" path="res://Assets/Personajes/Golems_Free_Version/Golems_Free_Version/Golem_1/Blue/No_Swoosh_VFX/Golem_1_attack.png" id="1_ilpdu"]
+[ext_resource type="PackedScene" uid="uid://d02tg8sowan15" path="res://Scenas/bala2.tscn" id="2_hhulh"]
+[ext_resource type="Texture2D" uid="uid://dfiaml6vmo12g" path="res://Assets/Texturas/jumpp.png" id="4_hhulh"]
+[ext_resource type="Texture2D" uid="uid://dthq7b10apjpo" path="res://Assets/Texturas/idle.png" id="5_hhulh"]
+[ext_resource type="Texture2D" uid="uid://ddbbv45jjphma" path="res://Assets/Texturas/walk.png" id="6_vpmpy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw61x"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(900, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o2nj"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(810, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erp46"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(720, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0of8"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(630, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x2i5"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(540, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu2v8"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(450, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73hui"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(360, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roguh"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(270, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8tyn"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(180, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8iju"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(90, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7i5o"]
+atlas = ExtResource("1_ilpdu")
+region = Rect2(0, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilpdu"]
+atlas = ExtResource("4_hhulh")
+region = Rect2(434, 0, 217, 287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhulh"]
+atlas = ExtResource("4_hhulh")
+region = Rect2(651, 0, 217, 287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpmpy"]
+atlas = ExtResource("4_hhulh")
+region = Rect2(0, 0, 217, 287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t0jc"]
+atlas = ExtResource("4_hhulh")
+region = Rect2(217, 0, 217, 287)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0725i"]
+atlas = ExtResource("5_hhulh")
+region = Rect2(0, 0, 201, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw7bd"]
+atlas = ExtResource("5_hhulh")
+region = Rect2(201, 0, 201, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nqnd"]
+atlas = ExtResource("5_hhulh")
+region = Rect2(402, 0, 201, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2gdr"]
+atlas = ExtResource("5_hhulh")
+region = Rect2(603, 0, 201, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy685"]
+atlas = ExtResource("6_vpmpy")
+region = Rect2(0, 0, 201, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vag20"]
+atlas = ExtResource("6_vpmpy")
+region = Rect2(402, 0, 201, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6vxs"]
+atlas = ExtResource("6_vpmpy")
+region = Rect2(603, 0, 201, 249)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdnkl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw61x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o2nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erp46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0of8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x2i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nu2v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73hui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roguh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8tyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8iju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7i5o")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilpdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhulh")
+}],
+"loop": true,
+"name": &"die",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpmpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t0jc")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0725i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw7bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nqnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2gdr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy685")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vag20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6vxs")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilpdu"]
+size = Vector2(28, 41)
+
+[node name="Jugador" type="CharacterBody2D"]
+script = ExtResource("1_hhulh")
+bala_scene = ExtResource("2_hhulh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(519, 394.5)
+scale = Vector2(0.19900484, 0.17716537)
+sprite_frames = SubResource("SpriteFrames_rdnkl")
+animation = &"walk"
+autoplay = "idle"
+frame_progress = 0.42761338
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(520, 395.5)
+shape = SubResource("RectangleShape2D_ilpdu")
+
+[node name="PuntoDisparo" type="Marker2D" parent="."]
+position = Vector2(522, 400)
+gizmo_extents = 0.8

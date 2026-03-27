@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh024gorlbth6"]
+
+[ext_resource type="Script" uid="uid://cb6tlf5qu8yu8" path="res://enemigo_volador.gd" id="1_11416"]
+[ext_resource type="Texture2D" uid="uid://8aepxd7pxxe8" path="res://Assets/Texturas/Mur.png" id="2_80s4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhdq2"]
+size = Vector2(23, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_80s4i"]
+radius = 113.07078
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_11416")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1737805, 0.17156868)
+texture = ExtResource("2_80s4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_bhdq2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_80s4i")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
