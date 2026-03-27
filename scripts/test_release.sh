@@ -1,15 +1,11 @@
 #!/bin/bash
 set -e
 
-echo "Setting up release environment..."
+echo "Ejecutando pruebas del entorno de liberación..."
 
-# Create the exports directory if it doesn't exist
-mkdir -p exports/
+if [ ! -f "exports/index.html" ]; then
+  echo "Error: no se encontró exports/index.html"
+  exit 1
+fi
 
-# Add your release environment setup logic here
-# Examples might include:
-# - Setting environment variables
-# - Building artifacts
-# - Preparing deployment files
-
-echo "Release environment setup complete!"
+echo "Prueba aprobada: exports/index.html existe."
